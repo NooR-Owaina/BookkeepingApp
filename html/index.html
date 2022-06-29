@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+    <!-- <link href="css/style.css" rel="stylesheet/scss" /> -->
+    <link rel="stylesheet" href="..\css/sideBar.css">
+ 
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a style="float: left;">Logo</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down"> 
+                <li><a href="login.html">logout</a></li>
+                <li><a href="users.html">users</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="toc">
+        <ul>
+          <li><a href="#intro">home</a></li>
+          <li>
+            <a >Insert</a>
+            <ul>
+              <li><a href="#add-customer">New customer</a></li>
+              <li><a href="#add-payment">New payment</a></li>
+            </ul>
+          </li>
+          <li>
+            <a>Report</a>
+            <ul>
+              <li><a href="#customers">customers</a></li>
+              <li><a href="#receipts">Receipts</a></li>
+              <li><a href="#receipts">Totel payments</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+        <svg class="toc-marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+          <path stroke="#444" stroke-width="3" fill="transparent" stroke-dasharray="0, 0, 0, 1000" stroke-linecap="round" stroke-linejoin="round" transform="translate(-0.5, -0.5)" />
+        </svg>
+    </div>
+      
+      <article class="contents">
+        <div >
+          <h2>Add new customer</h2>
+          <form id="add-customer">
+            <label for="name"> Name:</label><br>
+            <input type="text" id="name" name="name" value="" ><br>
+            <label for="id">ID:</label><br>
+            <input type="text" id="lname" name="id" value=""><br><br>
+            <input type="submit" value="Submit">
+          </form>
+        </div> 
+        <div >
+          <h2>Add new payment</h2>
+          <form id="add-payment">
+            <label for="id">customer ID:</label><br>
+            <input type="text" id="c-id" ><br>
+            <label for="amount">Payment amount:</label><br>
+            <input type="text" id="amount" ><br>
+            <label for="date">date:</label><br>
+            <input type="text" id="date" value="22-7-1"><br><br>
+            <input type="submit" value="Submit">
+          </form>
+        </div> 
+
+        <section id="customers">
+          <h2>OUR CUSTOMERS</h2>
+          <table style="width:100%">
+            <thead>
+              <tr>
+                <th>Customer id</th>
+                <th>Customer name</th> 
+              </tr>
+            </thead>
+            <tbody id="customerTable">
+              
+            </tbody>
+          </table>   
+        </section>
+        <section>
+          <h2>ALL PAYMENTS</h2>
+          <table style="width:100%">
+            <tr>
+              <th>Customer id</th>
+              <th> Amount</th> 
+              <th>Date</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>palestine</td>
+              <td>50</td>
+            </tr>
+          </table>
+        </section>
+      </article>
+      <script src="../js/index.js"></script>
+</body>
+</html>
